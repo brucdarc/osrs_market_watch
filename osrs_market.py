@@ -61,11 +61,10 @@ class Item:
 
 
     def __str__(self):
-        return '{:>35} {} {:>12} {} {:>12} {} {:>12} {} {:>6.6} {} {}'.format(str(self.name), " Margin: ", str(self.margins[-1]), " buy price: ", str(self.buy_averages[-1]), " sell price: ", str(self.sell_averages[-1]), " ROI: ", str(self.rois[-1]), " Trade Quantity: ", str(self.overall_quantities[-1]))
-
+        return "lmao"
 
     def __repr__(self):
-        return '{:>35} {} {:>12} {} {:>12} {} {:>12} {} {:>6.6} {} {}'.format(str(self.name), " Margin: ", str(self.margins[-1]), " buy price: ", str(self.buy_averages[-1]), " sell price: ", str(self.sell_averages[-1]), " ROI: ", str(self.rois[-1]), " Trade Quantity: ", str(self.overall_quantities[-1]))
+        return "lmao"
 
 
 
