@@ -59,6 +59,61 @@ class Item:
     def croi(self):
         return self.rois[-1]
 
+    def getAverageMargin(self, time_amount):
+        return self.getAverageBuyPrice(time_amount) - self.getAverageSellPrice(time_amount)
+
+    def getAverageRoi(self, time_amount):
+        sell_av =  self.getAverageSellPrice(time_amount)
+        buy_av = self.getAverageBuyPrice(time_amount)
+        if sell_av == 0 or buy_av == 0:
+            return 0
+        return (buy_av - sell_av) / sell_av
+
+    def getAverageBuyPrice(self, time_amount):
+        time_cutoff = time.time() - time_amount
+        split_index = 0
+
+        while(self.timestamps[split_index] < time_cutoff):
+            split_index += 1
+
+
+        buy_prices = self.buy_averages[split_index:]
+
+        running_average = 0
+        non_datafull_timestamps = 0
+
+        for price in buy_prices:
+            running_average += price
+            if price == 0: non_datafull_timestamps += 1
+
+        if(non_datafull_timestamps != len(buy_prices)):
+            running_average /= (len(buy_prices)-non_datafull_timestamps)
+
+        return running_average
+
+    def getAverageSellPrice(self, time_amount):
+        time_cutoff = time.time() - time_amount
+        split_index = 0
+
+        while(self.timestamps[split_index] < time_cutoff):
+            split_index += 1
+
+
+        sell_prices = self.sell_averages[split_index:]
+
+        running_average = 0
+        non_datafull_timestamps = 0
+
+        for price in sell_prices:
+            running_average += price
+            if price == 0: non_datafull_timestamps += 1
+
+        if(non_datafull_timestamps != len(sell_prices)):
+            running_average /= (len(sell_prices)-non_datafull_timestamps)
+
+        return running_average
+
+
     def last_10_buy_quant(self):
         running_sum = 0
         index = 0
@@ -153,6 +208,40 @@ class MarketDatabase:
             topn.append(currentTop)
         return topn
 
+    def getHighestMargins_with_time(self, howmany, time_ago):
+        assert (len(self.itemList) > howmany)
+        topn = []
+        for x in range(0, howmany):
+            currentTop = None
+            for item in self.itemList:
+                if item.cbuy_price() > 50:
+                    if currentTop is None:
+                        if item not in topn:
+                            currentTop = item
+                    else:
+                        if item.getAverageMargin(time_ago) > currentTop.getAverageMargin(time_ago) and item not in topn:
+                            currentTop = item
+            topn.append(currentTop)
+        return topn
+
+    def getHighestRois_with_time(self, howmany, time_ago):
+        assert (len(self.itemList) > howmany)
+        topn = []
+        for x in range(0, howmany):
+            currentTop = None
+            for item in self.itemList:
+                if item.cbuy_price() > 50:
+                    if currentTop is None:
+                        if item not in topn:
+                            currentTop = item
+                    else:
+                        if item.getAverageRoi(time_ago) > currentTop.getAverageRoi(time_ago) and item not in topn:
+                            currentTop = item
+            topn.append(currentTop)
+        return topn
+
+
+
 
 
     def __str__(self):
@@ -174,10 +263,17 @@ for item_data in market_data:
     database.updateItem(item['id'], item['name'], item['members'], item['sp'], int(item['buy_average']), item['buy_quantity'], int(item['sell_average']), item['sell_quantity'], item['overall_average'], item['overall_quantity'])
 
 #highMarg = database.getHighestMargins(10)
-highMarg = database.getHighestRois(100)
+
+tiem = 1000000
+
+highMarg = database.getHighestRois_with_time(100, tiem)
+
+
+
+
 print("Items currently with the return on investment")
 for item in highMarg:
-    print(item)
+    print(str(item.name) + "  daily roi " + str(item.getAverageMargin(tiem)))
 
 #print(database)
 database.writeToFile("osrs_data")
