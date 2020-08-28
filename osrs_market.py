@@ -61,10 +61,10 @@ class Item:
 
 
     def __str__(self):
-        CurrentROIitems_str = '{: <8} {: <28} with a margin of {: <12} a return on investment of {: <10} buy quantity: {: <8} sell quantity: {: <8}'
-        CurrentROIitems_list = [self.overall_quantities, self.name, self.margins, self.rois, self.buy_quantities, self.sp, self.sell_quantities]
+        CurrentROIitems_str = '{: <8} {: <28} with a margin of {: <10} a return on investment of {: <8} buy qty: {: <8} sell qty: {: <8} buy avg: {: <8} sell avg: {: <8}'
+        CurrentROIitems_list = [self.overall_quantities, self.name, self.margins, self.rois, self.buy_quantities, self.sp, self.sell_quantities, self.buy_averages, self.sell_averages]
         for row in CurrentROIitems_list:
-            return (CurrentROIitems_str.format(self.overall_quantities[-1], self.name, self.margins[-1], str(round(self.rois[-1], 3)), self.buy_quantities[-1], self.sell_quantities[-1]).format(*row))
+            return (CurrentROIitems_str.format(self.overall_quantities[-1], self.name, self.margins[-1], str(round(self.rois[-1], 3)), self.buy_quantities[-1], self.sell_quantities[-1], self.buy_averages[-1], self.sell_averages[-1]).format(*row))
 
 
         #Col_width = max(len(str(word)) for row in CurrentROIitems_list for word in row) + 2
