@@ -59,12 +59,30 @@ class Item:
     def croi(self):
         return self.rois[-1]
 
+    def last_10_buy_quant(self):
+        running_sum = 0
+        index = 0
+        while index > -10:
+            index -= 1
+            running_sum += self.buy_quantities[index]
+        return running_sum
+
+    def last_10_sell_quant(self):
+        running_sum = 0
+        index = 0
+        while index > -10:
+            index -= 1
+            running_sum += self.buy_quantities[index]
+        return running_sum
 
     def __str__(self):
-        CurrentROIitems_str = '{: <8} {: <28} with a margin of {: <10} a return on investment of {: <8} buy qty: {: <8} sell qty: {: <8} buy avg: {: <8} sell avg: {: <8}'
+        temp = 'lmao'#ayy lmao
+        CurrentROIitems_str = '{: <8} {: <28} with a margin of {: <10} a return on investment of {: <8} buy qty: {: <8} sell qty: {: <8} buy avg: {: <8} sell avg: {: <8}\n         Recent activity:\t      bought:{: <20} sold:{: <10}'
         CurrentROIitems_list = [self.overall_quantities, self.name, self.margins, self.rois, self.buy_quantities, self.sp, self.sell_quantities, self.buy_averages, self.sell_averages]
         for row in CurrentROIitems_list:
-            return (CurrentROIitems_str.format(self.overall_quantities[-1], self.name, self.margins[-1], str(round(self.rois[-1], 3)), self.buy_quantities[-1], self.sell_quantities[-1], self.buy_averages[-1], self.sell_averages[-1]).format(*row))
+            return (CurrentROIitems_str.format(self.overall_quantities[-1], self.name, self.margins[-1], str(round(self.rois[-1], 3)), self.buy_quantities[-1], self.sell_quantities[-1], self.buy_averages[-1], self.sell_averages[-1], self.last_10_buy_quant(), self.last_10_sell_quant()).format(*row))
+
+
 
 
 
