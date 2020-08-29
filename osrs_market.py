@@ -132,10 +132,10 @@ class Item:
 
     def __str__(self):
         temp = 'lmao'#ayy lmao
-        CurrentROIitems_str = '{: <8} {: <28} with a margin of {: <10} a return on investment of {: <8} buy qty: {: <8} sell qty: {: <8} buy avg: {: <8} sell avg: {: <8}\n         Recent activity:\t      bought:{: <20} sold:{: <10}'
+        CurrentROIitems_str = '{: <8} {: <28} with a margin of {: <10} a return on investment of {: <8} buy qty: {: <8} sell qty: {: <8} buy avg: {: <8} sell avg: {: <8}\n         Recent activity:\t      bought:{: <20} sold:{: <10}\n Over the last 24 hours:\t average margin{} average ROI{} average buy price{} average sell price{}'
         CurrentROIitems_list = [self.overall_quantities, self.name, self.margins, self.rois, self.buy_quantities, self.sp, self.sell_quantities, self.buy_averages, self.sell_averages]
         for row in CurrentROIitems_list:
-            return (CurrentROIitems_str.format(self.overall_quantities[-1], self.name, self.margins[-1], str(round(self.rois[-1], 3)), self.buy_quantities[-1], self.sell_quantities[-1], self.buy_averages[-1], self.sell_averages[-1], self.last_10_buy_quant(), self.last_10_sell_quant()).format(*row))
+            return (CurrentROIitems_str.format(self.overall_quantities[-1], self.name, self.margins[-1], str(round(self.rois[-1], 3)), self.buy_quantities[-1], self.sell_quantities[-1], self.buy_averages[-1], self.sell_averages[-1], self.last_10_buy_quant(), self.last_10_sell_quant(), self.getAverageMargin(86400), self.getAverageRoi(86400), self.getAverageBuyPrice(86400), self.getAverageSellPrice(86400)).format(*row))
 
 
 
@@ -273,7 +273,7 @@ highMarg = database.getHighestRois_with_time(100, tiem)
 
 print("Items currently with the return on investment")
 for item in highMarg:
-    print(str(item.name) + "  daily roi " + str(item.getAverageMargin(tiem)))
+    print(item)
 
 #print(database)
 database.writeToFile("osrs_data")
