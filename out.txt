@@ -1,0 +1,302 @@
+Items currently with the return on investment
+1        Team-41 cape                 with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 389      sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 389.0       average ROI: 0                     average buy price: 389.0         average sell price: 0
+1        Steel mace                   with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 1900     sell avg: 0       
+         Recent activity:	      bought:10                   sold:10        
+Over the last 24 hours:               average margin: 2212.818    average ROI: 32.07                 average buy price: 2281.818      average sell price: 69.0
+2        Bucket of wax                with a margin of 0          a return on investment of 0        buy qty: 2        sell qty: 0        buy avg: 758      sell avg: 0       
+         Recent activity:	      bought:18                   sold:18        
+Over the last 24 hours:               average margin: 758.0       average ROI: 0                     average buy price: 758.0         average sell price: 0
+1        Iron plateskirt              with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 254      sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 254.0       average ROI: 0                     average buy price: 254.0         average sell price: 0
+1        Blue skirt                   with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 200      sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 200.0       average ROI: 0                     average buy price: 200.0         average sell price: 0
+1        Splitbark boots              with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 7657     sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 7657.0      average ROI: 0                     average buy price: 7657.0        average sell price: 0
+1        Nose peg                     with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 500      sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 500.0       average ROI: 0                     average buy price: 500.0         average sell price: 0
+1        Equa leaves                  with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 250      sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 250.0       average ROI: 0                     average buy price: 250.0         average sell price: 0
+1        Fly fishing rod              with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 80       sell avg: 0       
+         Recent activity:	      bought:10                   sold:10        
+Over the last 24 hours:               average margin: 2.0         average ROI: 0.026                 average buy price: 80.0          average sell price: 78.0
+1        Mining helmet                with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 844      sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 844.0       average ROI: 0                     average buy price: 844.0         average sell price: 0
+2        Snowy knight                 with a margin of 500        a return on investment of 1.0      buy qty: 1        sell qty: 1        buy avg: 1000     sell avg: 500     
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 500.0       average ROI: 1.0                   average buy price: 1000.0        average sell price: 500.0
+1        Steel scimitar               with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 270      sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 270.0       average ROI: 0                     average buy price: 270.0         average sell price: 0
+6        Bronze sword                 with a margin of -34        a return on investment of -0.34    buy qty: 1        sell qty: 5        buy avg: 66       sell avg: 100     
+         Recent activity:	      bought:10                   sold:10        
+Over the last 24 hours:               average margin: -24.727     average ROI: -0.255                average buy price: 72.182        average sell price: 96.909
+1        Team-10 cape                 with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 217      sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 217.0       average ROI: 0                     average buy price: 217.0         average sell price: 0
+134      Calquat tree seed            with a margin of 34         a return on investment of 0.25     buy qty: 112      sell qty: 22       buy avg: 170      sell avg: 136     
+         Recent activity:	      bought:1008                 sold:1008      
+Over the last 24 hours:               average margin: 34.0        average ROI: 0.25                  average buy price: 170.0         average sell price: 136.0
+127      Iron chainbody               with a margin of -95        a return on investment of -0.522   buy qty: 126      sell qty: 1        buy avg: 87       sell avg: 182     
+         Recent activity:	      bought:1136                 sold:1136      
+Over the last 24 hours:               average margin: -52.273     average ROI: -0.318                average buy price: 112.091       average sell price: 164.364
+2        Steel sword                  with a margin of 0          a return on investment of 0        buy qty: 2        sell qty: 0        buy avg: 178      sell avg: 0       
+         Recent activity:	      bought:20                   sold:20        
+Over the last 24 hours:               average margin: 178.0       average ROI: 0                     average buy price: 178.0         average sell price: 0
+120      Cave goblin wire             with a margin of 892        a return on investment of 0.885    buy qty: 1        sell qty: 119      buy avg: 1900     sell avg: 1008    
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 892.0       average ROI: 0.885                 average buy price: 1900.0        average sell price: 1008.0
+30       Defence potion(1)            with a margin of 0          a return on investment of 0        buy qty: 30       sell qty: 0        buy avg: 103      sell avg: 0       
+         Recent activity:	      bought:270                  sold:270       
+Over the last 24 hours:               average margin: 44.0        average ROI: 0.746                 average buy price: 103.0         average sell price: 59.0
+5        Yellow cape                  with a margin of 0          a return on investment of 0        buy qty: 5        sell qty: 0        buy avg: 583      sell avg: 0       
+         Recent activity:	      bought:45                   sold:45        
+Over the last 24 hours:               average margin: 583.0       average ROI: 0                     average buy price: 583.0         average sell price: 0
+1        Iron boots                   with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 2754     sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 285.0       average ROI: 0.115                 average buy price: 2754.0        average sell price: 2469.0
+100      Oak sapling                  with a margin of 0          a return on investment of 0        buy qty: 100      sell qty: 0        buy avg: 325      sell avg: 0       
+         Recent activity:	      bought:900                  sold:900       
+Over the last 24 hours:               average margin: 325.0       average ROI: 0                     average buy price: 325.0         average sell price: 0
+7        Mithril plateskirt           with a margin of 74         a return on investment of 0.073    buy qty: 6        sell qty: 1        buy avg: 1081     sell avg: 1007    
+         Recent activity:	      bought:54                   sold:54        
+Over the last 24 hours:               average margin: 8.545       average ROI: 0.008                 average buy price: 1081.0        average sell price: 1072.455
+2        Extended antifire(1)         with a margin of 55         a return on investment of 0.393    buy qty: 1        sell qty: 1        buy avg: 195      sell avg: 140     
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 49.182      average ROI: 0.337                 average buy price: 195.0         average sell price: 145.818
+2        Poison                       with a margin of 0          a return on investment of 0        buy qty: 2        sell qty: 0        buy avg: 660      sell avg: 0       
+         Recent activity:	      bought:18                   sold:18        
+Over the last 24 hours:               average margin: 660.0       average ROI: 0                     average buy price: 660.0         average sell price: 0
+2        Team-49 cape                 with a margin of -26        a return on investment of -0.135   buy qty: 1        sell qty: 1        buy avg: 167      sell avg: 193     
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: -26.0       average ROI: -0.135                average buy price: 167.0         average sell price: 193.0
+1        Mithril kiteshield (g)       with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 5977     sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 5977.0      average ROI: 0                     average buy price: 5977.0        average sell price: 0
+9130     Rune thrownaxe               with a margin of 1          a return on investment of 0.005    buy qty: 10       sell qty: 9120     buy avg: 193      sell avg: 192     
+         Recent activity:	      bought:90                   sold:90        
+Over the last 24 hours:               average margin: -0.455      average ROI: -0.002                average buy price: 193.0         average sell price: 193.455
+1        White magic staff            with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 2500     sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 2500.0      average ROI: 0                     average buy price: 2500.0        average sell price: 0
+12       Black cape                   with a margin of 98         a return on investment of 0.206    buy qty: 11       sell qty: 1        buy avg: 573      sell avg: 475     
+         Recent activity:	      bought:99                   sold:99        
+Over the last 24 hours:               average margin: 98.0        average ROI: 0.206                 average buy price: 573.0         average sell price: 475.0
+1        Steel warhammer              with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 158      sell avg: 0       
+         Recent activity:	      bought:10                   sold:10        
+Over the last 24 hours:               average margin: 25.818      average ROI: 0.199                 average buy price: 155.818       average sell price: 130.0
+844      Adamant knife                with a margin of 0          a return on investment of 0        buy qty: 844      sell qty: 0        buy avg: 334      sell avg: 0       
+         Recent activity:	      bought:7596                 sold:7596      
+Over the last 24 hours:               average margin: 334.0       average ROI: 0                     average buy price: 334.0         average sell price: 0
+106      Combat potion(4)             with a margin of 0          a return on investment of 0        buy qty: 106      sell qty: 0        buy avg: 401      sell avg: 0       
+         Recent activity:	      bought:954                  sold:954       
+Over the last 24 hours:               average margin: 401.0       average ROI: 0                     average buy price: 401.0         average sell price: 0
+2        Black wizard hat (t)         with a margin of 0          a return on investment of 0        buy qty: 2        sell qty: 0        buy avg: 178868   sell avg: 0       
+         Recent activity:	      bought:18                   sold:18        
+Over the last 24 hours:               average margin: 178868.0    average ROI: 0                     average buy price: 178868.0      average sell price: 0
+22       Red d'hide chaps             with a margin of 0          a return on investment of 0.0      buy qty: 21       sell qty: 1        buy avg: 2666     sell avg: 2666    
+         Recent activity:	      bought:190                  sold:190       
+Over the last 24 hours:               average margin: 31.273      average ROI: 0.012                 average buy price: 2688.364      average sell price: 2657.091
+4        Amulet mould                 with a margin of 103        a return on investment of 2.06     buy qty: 2        sell qty: 2        buy avg: 153      sell avg: 50      
+         Recent activity:	      bought:18                   sold:18        
+Over the last 24 hours:               average margin: 103.0       average ROI: 2.06                  average buy price: 153.0         average sell price: 50.0
+1        Spiny helmet                 with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 1318     sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 1318.0      average ROI: 0                     average buy price: 1318.0        average sell price: 0
+51       Extended antifire(2)         with a margin of 0          a return on investment of 0        buy qty: 51       sell qty: 0        buy avg: 399      sell avg: 0       
+         Recent activity:	      bought:489                  sold:489       
+Over the last 24 hours:               average margin: 11.0        average ROI: 0.026                 average buy price: 435.0         average sell price: 424.0
+8        Iron set (lg)                with a margin of 0          a return on investment of 0        buy qty: 8        sell qty: 0        buy avg: 750      sell avg: 0       
+         Recent activity:	      bought:72                   sold:72        
+Over the last 24 hours:               average margin: 750.0       average ROI: 0                     average buy price: 750.0         average sell price: 0
+1        Ring mould                   with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 104      sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 104.0       average ROI: 0                     average buy price: 104.0         average sell price: 0
+1        Rune gold-trimmed set (lg)   with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 369998   sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 369998.0    average ROI: 0                     average buy price: 369998.0      average sell price: 0
+2        Black boots                  with a margin of 205        a return on investment of 0.837    buy qty: 1        sell qty: 1        buy avg: 450      sell avg: 245     
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 205.0       average ROI: 0.837                 average buy price: 450.0         average sell price: 245.0
+4        Wizard's mind bomb           with a margin of 48         a return on investment of 0.312    buy qty: 2        sell qty: 2        buy avg: 202      sell avg: 154     
+         Recent activity:	      bought:19                   sold:19        
+Over the last 24 hours:               average margin: 47.636      average ROI: 0.309                 average buy price: 201.636       average sell price: 154.0
+3        Needle                       with a margin of 0          a return on investment of 0        buy qty: 3        sell qty: 0        buy avg: 124      sell avg: 0       
+         Recent activity:	      bought:30                   sold:30        
+Over the last 24 hours:               average margin: 72.545      average ROI: 2.015                 average buy price: 108.545       average sell price: 36.0
+1        Splitbark gauntlets          with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 2999     sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 2999.0      average ROI: 0                     average buy price: 2999.0        average sell price: 0
+1        Facemask                     with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 430      sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 430.0       average ROI: 0                     average buy price: 430.0         average sell price: 0
+2        Yellow gloves                with a margin of 0          a return on investment of 0        buy qty: 2        sell qty: 0        buy avg: 1021     sell avg: 0       
+         Recent activity:	      bought:18                   sold:18        
+Over the last 24 hours:               average margin: 1021.0      average ROI: 0                     average buy price: 1021.0        average sell price: 0
+8        Arctic pine logs             with a margin of 0          a return on investment of 0        buy qty: 8        sell qty: 0        buy avg: 401      sell avg: 0       
+         Recent activity:	      bought:72                   sold:72        
+Over the last 24 hours:               average margin: 401.0       average ROI: 0                     average buy price: 401.0         average sell price: 0
+1        Pestle and mortar            with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 850      sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 850.0       average ROI: 0                     average buy price: 850.0         average sell price: 0
+11       Iron platelegs               with a margin of -6         a return on investment of -0.033   buy qty: 10       sell qty: 1        buy avg: 176      sell avg: 182     
+         Recent activity:	      bought:90                   sold:90        
+Over the last 24 hours:               average margin: 2.364       average ROI: 0.014                 average buy price: 176.0         average sell price: 173.636
+2401     Chaos talisman               with a margin of 227        a return on investment of 0.366    buy qty: 2400     sell qty: 1        buy avg: 848      sell avg: 621     
+         Recent activity:	      bought:21600                sold:21600     
+Over the last 24 hours:               average margin: 220.273     average ROI: 0.351                 average buy price: 848.0         average sell price: 627.727
+1000     Runite bolts (p)             with a margin of 0          a return on investment of 0        buy qty: 1000     sell qty: 0        buy avg: 599      sell avg: 0       
+         Recent activity:	      bought:9000                 sold:9000      
+Over the last 24 hours:               average margin: 599.0       average ROI: 0                     average buy price: 599.0         average sell price: 0
+12       Mithril axe                  with a margin of 15         a return on investment of 0.176    buy qty: 2        sell qty: 10       buy avg: 100      sell avg: 85      
+         Recent activity:	      bought:20                   sold:20        
+Over the last 24 hours:               average margin: 18.636      average ROI: 0.216                 average buy price: 104.909       average sell price: 86.273
+3        Cooked meat                  with a margin of -11        a return on investment of -0.118   buy qty: 2        sell qty: 1        buy avg: 82       sell avg: 93      
+         Recent activity:	      bought:18                   sold:18        
+Over the last 24 hours:               average margin: -11.0       average ROI: -0.118                average buy price: 82.0          average sell price: 93.0
+2        Iron kiteshield              with a margin of 40         a return on investment of 0.667    buy qty: 1        sell qty: 1        buy avg: 100      sell avg: 60      
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 38.182      average ROI: 0.618                 average buy price: 100.0         average sell price: 61.818
+34       Ranging potion(1)            with a margin of -1         a return on investment of -0.008   buy qty: 33       sell qty: 1        buy avg: 122      sell avg: 123     
+         Recent activity:	      bought:297                  sold:297       
+Over the last 24 hours:               average margin: 2.273       average ROI: 0.019                 average buy price: 122.0         average sell price: 119.727
+1        White apron                  with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 102      sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 102.0       average ROI: 0                     average buy price: 102.0         average sell price: 0
+3        Shortbow                     with a margin of 24         a return on investment of 0.364    buy qty: 1        sell qty: 2        buy avg: 90       sell avg: 66      
+         Recent activity:	      bought:10                   sold:10        
+Over the last 24 hours:               average margin: 20.182      average ROI: 0.306                 average buy price: 86.182        average sell price: 66.0
+1        Ancient bracers              with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 7869     sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 7869.0      average ROI: 0                     average buy price: 7869.0        average sell price: 0
+6        Feldip hills teleport        with a margin of 135        a return on investment of 0.107    buy qty: 1        sell qty: 5        buy avg: 1398     sell avg: 1263    
+         Recent activity:	      bought:10                   sold:10        
+Over the last 24 hours:               average margin: 134.455     average ROI: 0.106                 average buy price: 1397.455      average sell price: 1263.0
+2        Maple blackjack(o)           with a margin of 512        a return on investment of 0.31     buy qty: 1        sell qty: 1        buy avg: 2162     sell avg: 1650    
+         Recent activity:	      bought:10                   sold:10        
+Over the last 24 hours:               average margin: 663.455     average ROI: 0.402                 average buy price: 2313.455      average sell price: 1650.0
+1        Divine super strength potion(4) with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 4930     sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 2160.0      average ROI: 0.78                  average buy price: 4930.0        average sell price: 2770.0
+1        Unholy book page set         with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 290000   sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 290000.0    average ROI: 0                     average buy price: 290000.0      average sell price: 0
+1        Seed dibber                  with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 109      sell avg: 0       
+         Recent activity:	      bought:10                   sold:10        
+Over the last 24 hours:               average margin: 108.455     average ROI: 0                     average buy price: 108.455       average sell price: 0
+1        Initiate cuisse              with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 4000     sell avg: 0       
+         Recent activity:	      bought:11                   sold:11        
+Over the last 24 hours:               average margin: 4086.182    average ROI: 0                     average buy price: 4086.182      average sell price: 0
+21       Restore potion(3)            with a margin of 16         a return on investment of 0.4      buy qty: 1        sell qty: 20       buy avg: 56       sell avg: 40      
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 16.0        average ROI: 0.4                   average buy price: 56.0          average sell price: 40.0
+3        Kharyrll teleport            with a margin of 0          a return on investment of 0        buy qty: 3        sell qty: 0        buy avg: 12998    sell avg: 0       
+         Recent activity:	      bought:32                   sold:32        
+Over the last 24 hours:               average margin: 12986.182   average ROI: 0                     average buy price: 12986.182     average sell price: 0
+1        Red gloves                   with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 879      sell avg: 0       
+         Recent activity:	      bought:10                   sold:10        
+Over the last 24 hours:               average margin: 875.364     average ROI: 0                     average buy price: 875.364       average sell price: 0
+1        Asgarnian ale                with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 56       sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 56.0        average ROI: 0                     average buy price: 56.0          average sell price: 0
+971      Emerald ring                 with a margin of 726        a return on investment of 0.938    buy qty: 927      sell qty: 44       buy avg: 1500     sell avg: 774     
+         Recent activity:	      bought:8352                 sold:8352      
+Over the last 24 hours:               average margin: 594.727     average ROI: 0.785                 average buy price: 1352.727      average sell price: 758.0
+3        Mithril full helm            with a margin of -36        a return on investment of -0.062   buy qty: 1        sell qty: 2        buy avg: 540      sell avg: 576     
+         Recent activity:	      bought:11                   sold:11        
+Over the last 24 hours:               average margin: 14.727      average ROI: 0.025                 average buy price: 610.364       average sell price: 595.636
+1        Zamorak's grapes             with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 1094     sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 1094.0      average ROI: 0                     average buy price: 1094.0        average sell price: 0
+21       Divine ranging potion(1)     with a margin of 26         a return on investment of 0.061    buy qty: 20       sell qty: 1        buy avg: 450      sell avg: 424     
+         Recent activity:	      bought:330                  sold:330       
+Over the last 24 hours:               average margin: 19.818      average ROI: 0.047                 average buy price: 443.818       average sell price: 424.0
+1        Snakeskin body               with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 544      sell avg: 0       
+         Recent activity:	      bought:10                   sold:10        
+Over the last 24 hours:               average margin: -4.0        average ROI: -0.007                average buy price: 546.0         average sell price: 550.0
+20       Watering can                 with a margin of 0          a return on investment of 0        buy qty: 20       sell qty: 0        buy avg: 380      sell avg: 0       
+         Recent activity:	      bought:180                  sold:180       
+Over the last 24 hours:               average margin: 380.0       average ROI: 0                     average buy price: 380.0         average sell price: 0
+2        Bracelet mould               with a margin of 356        a return on investment of 7.12     buy qty: 1        sell qty: 1        buy avg: 406      sell avg: 50      
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 110.545     average ROI: 0.374                 average buy price: 406.0         average sell price: 295.455
+1        Superantipoison(1)           with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 79       sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 24.0        average ROI: 0.436                 average buy price: 79.0          average sell price: 55.0
+3        Blue cape                    with a margin of 133        a return on investment of 0.532    buy qty: 2        sell qty: 1        buy avg: 383      sell avg: 250     
+         Recent activity:	      bought:18                   sold:18        
+Over the last 24 hours:               average margin: 133.0       average ROI: 0.532                 average buy price: 383.0         average sell price: 250.0
+10       Raw mackerel                 with a margin of 0          a return on investment of 0        buy qty: 10       sell qty: 0        buy avg: 60       sell avg: 0       
+         Recent activity:	      bought:100                  sold:100       
+Over the last 24 hours:               average margin: 57.636      average ROI: 0                     average buy price: 57.636        average sell price: 0
+1        Basalt                       with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 512      sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 13.0        average ROI: 0.026                 average buy price: 512.0         average sell price: 499.0
+8        Hunter potion(4)             with a margin of 0          a return on investment of 0        buy qty: 8        sell qty: 0        buy avg: 4501     sell avg: 0       
+         Recent activity:	      bought:72                   sold:72        
+Over the last 24 hours:               average margin: 4501.0      average ROI: 0                     average buy price: 4501.0        average sell price: 0
+2        Ham cloak                    with a margin of 0          a return on investment of 0        buy qty: 2        sell qty: 0        buy avg: 1116     sell avg: 0       
+         Recent activity:	      bought:18                   sold:18        
+Over the last 24 hours:               average margin: 1116.0      average ROI: 0                     average buy price: 1116.0        average sell price: 0
+1        Peaceful blessing            with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 10000    sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 10000.0     average ROI: 0                     average buy price: 10000.0       average sell price: 0
+1        Doogle leaves                with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 125      sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 125.0       average ROI: 0                     average buy price: 125.0         average sell price: 0
+484      Raw trout                    with a margin of 10         a return on investment of 0.135    buy qty: 314      sell qty: 170      buy avg: 84       sell avg: 74      
+         Recent activity:	      bought:2826                 sold:2826      
+Over the last 24 hours:               average margin: 8.0         average ROI: 0.105                 average buy price: 84.0          average sell price: 76.0
+62       Iron scimitar                with a margin of 28         a return on investment of 0.452    buy qty: 41       sell qty: 21       buy avg: 90       sell avg: 62      
+         Recent activity:	      bought:494                  sold:494       
+Over the last 24 hours:               average margin: 26.909      average ROI: 0.434                 average buy price: 88.909        average sell price: 62.0
+11       Bronze wire                  with a margin of 4          a return on investment of 0.02     buy qty: 10       sell qty: 1        buy avg: 204      sell avg: 200     
+         Recent activity:	      bought:94                   sold:94        
+Over the last 24 hours:               average margin: 4.364       average ROI: 0.022                 average buy price: 204.364       average sell price: 200.0
+1        Rune scimitar ornament kit (saradomin) with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 85492    sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 85492.0     average ROI: 0                     average buy price: 85492.0       average sell price: 0
+6        Monk's robe top (t)          with a margin of 4680       a return on investment of 0.097    buy qty: 5        sell qty: 1        buy avg: 53000    sell avg: 48320   
+         Recent activity:	      bought:45                   sold:45        
+Over the last 24 hours:               average margin: 4680.0      average ROI: 0.097                 average buy price: 53000.0       average sell price: 48320.0
+45       Climbing boots               with a margin of 113        a return on investment of 0.219    buy qty: 34       sell qty: 11       buy avg: 629      sell avg: 516     
+         Recent activity:	      bought:321                  sold:321       
+Over the last 24 hours:               average margin: 121.182     average ROI: 0.229                 average buy price: 650.273       average sell price: 529.091
+17       Potato                       with a margin of 6          a return on investment of 0.085    buy qty: 14       sell qty: 3        buy avg: 77       sell avg: 71      
+         Recent activity:	      bought:126                  sold:126       
+Over the last 24 hours:               average margin: 6.0         average ROI: 0.085                 average buy price: 77.0          average sell price: 71.0
+3        Zamorak brew(4)              with a margin of 0          a return on investment of 0        buy qty: 3        sell qty: 0        buy avg: 1837     sell avg: 0       
+         Recent activity:	      bought:27                   sold:27        
+Over the last 24 hours:               average margin: 1837.0      average ROI: 0                     average buy price: 1837.0        average sell price: 0
+11       Team-39 cape                 with a margin of 0          a return on investment of 0        buy qty: 11       sell qty: 0        buy avg: 259      sell avg: 0       
+         Recent activity:	      bought:99                   sold:99        
+Over the last 24 hours:               average margin: 259.0       average ROI: 0                     average buy price: 259.0         average sell price: 0
+12       Willow branch                with a margin of 0          a return on investment of 0        buy qty: 12       sell qty: 0        buy avg: 1035     sell avg: 0       
+         Recent activity:	      bought:120                  sold:120       
+Over the last 24 hours:               average margin: 1151.0      average ROI: 0                     average buy price: 1151.0        average sell price: 0
+1        Black set (lg)               with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 8735     sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 8735.0      average ROI: 0                     average buy price: 8735.0        average sell price: 0
+79       Rope                         with a margin of 0          a return on investment of 0        buy qty: 79       sell qty: 0        buy avg: 53       sell avg: 0       
+         Recent activity:	      bought:726                  sold:726       
+Over the last 24 hours:               average margin: -6.182      average ROI: -0.101                average buy price: 54.818        average sell price: 61.0
+2        Red hat                      with a margin of 54         a return on investment of 0.054    buy qty: 1        sell qty: 1        buy avg: 1054     sell avg: 1000    
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 24.364      average ROI: 0.024                 average buy price: 1054.0        average sell price: 1029.636
+1        Armadyl cloak                with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 14876    sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 14876.0     average ROI: 0                     average buy price: 14876.0       average sell price: 0
+11507    Air talisman                 with a margin of 7          a return on investment of 0.083    buy qty: 11501    sell qty: 6        buy avg: 91       sell avg: 84      
+         Recent activity:	      bought:103510               sold:103510    
+Over the last 24 hours:               average margin: 7.182       average ROI: 0.085                 average buy price: 91.182        average sell price: 84.0
+1        Pineapple chunks             with a margin of 0          a return on investment of 0        buy qty: 1        sell qty: 0        buy avg: 200      sell avg: 0       
+         Recent activity:	      bought:9                    sold:9         
+Over the last 24 hours:               average margin: 200.0       average ROI: 0                     average buy price: 200.0         average sell price: 0
+done
