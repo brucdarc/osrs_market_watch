@@ -255,7 +255,7 @@ class MarketDatabase:
 
 
 market_data = requests.get('https://rsbuddy.com/exchange/summary.json')
-market_data = json.loads(market_data.content)
+market_data = json.loads(market_data.content.decode('utf8'))
 database = MarketDatabase("osrs_data")
 
 for item_data in market_data:
@@ -264,7 +264,7 @@ for item_data in market_data:
 
 #highMarg = database.getHighestMargins(10)
 
-tiem = 1000000
+tiem = 86400
 
 highMarg = database.getHighestRois_with_time(100, tiem)
 
