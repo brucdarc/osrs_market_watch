@@ -2,6 +2,7 @@
 import pickle
 import time
 import numpy
+from Item import Item
 
 class MarketDatabase:
     def __init__(self, filename):
