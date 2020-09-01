@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4791c4ac-4ce9-46d9-9cd0-d3abcc71eb71" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Item.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MarketDatabase.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/osrs_data" beforeDir="false" afterPath="$PROJECT_DIR$/osrs_data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/osrs_market.py" beforeDir="false" afterPath="$PROJECT_DIR$/osrs_market.py" afterDir="false" />
@@ -10,6 +13,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
