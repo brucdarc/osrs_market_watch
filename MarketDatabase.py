@@ -3,6 +3,7 @@ import pickle
 import time
 import numpy
 from Item import Item
+#import sorted
 
 class MarketDatabase:
     def __init__(self, filename):
@@ -90,25 +91,35 @@ class MarketDatabase:
 
 
 
-        topn = []
-        for x in range(0, number_to_retrieve):
-            currentTop = None
-            for item in self.itemList:
-                search_conditions = item.getAverageMargin(time_ago) > min_margin
-                if item.cbuy_price() > 50:
-                    if currentTop is None:
-                        if item not in topn and search_conditions:
-                            currentTop = item
-                    else:
-                        if item.getAverageRoi(time_ago) > currentTop.getAverageRoi \
-                                (time_ago) and item not in topn and search_conditions:
-                            currentTop = item
-            if currentTop is not None:
-                topn.append(currentTop)
-        return topn
+        #run through items, grab all of them that meet my search criteria
+        #create tuple pairs of the items, and the sort condition i want to sort them by
+        #sort the list of (item, sort_var) based on the variable i want to sort by
+
+        valid_item_canditates = []
+
+        for item in self.itemList:
+            search_conditions = item.getAverageMargin(time_ago) > min_margin
+            if search_conditions:
+                valid_item_canditates.append(item)
 
 
 
+        tuple_item_list = []
+
+        for item in valid_item_canditates:
+            tuple_paired_item = (item, item.getAverageRoi(time_ago))
+            tuple_item_list.append(tuple_paired_item)
+
+
+        sorted_tuples = sorted(tuple_item_list, key=lambda x: x[-1])
+
+        print(sorted_tuples)
+
+        topn = [tup[0] for tup in sorted_tuples]
+        topn.reverse()
+        if len(topn) > number_to_retrieve:
+            return topn[:number_to_retrieve]
+        else: return topn
 
 
     def __str__(self):

@@ -135,6 +135,7 @@ class Item:
 
 
     def last_10_buy_quant(self):
+        if (len(self.buy_quantities) < 10): return ""
         running_sum = 0
         index = 0
         while index > -10:
@@ -143,6 +144,7 @@ class Item:
         return running_sum
 
     def last_10_sell_quant(self):
+        if(len(self.buy_quantities) < 10): return ""
         running_sum = 0
         index = 0
         while index > -10:
@@ -158,3 +160,4 @@ class Item:
             return (CurrentROIitems_str.format(self.overall_quantities[-1], self.name, self.margins[-1], str(round(self.rois[-1], 3)), self.buy_quantities[-1], self.sell_quantities[-1], self.buy_averages[-1], self.sell_averages[-1], self.last_10_buy_quant(), self.last_10_sell_quant(), str(round(self.getAverageMargin(86400), 3)), str(round(self.getAverageRoi(86400), 3)), str(round(self.getAverageBuyPrice(86400), 3)), str(round(self.getAverageSellPrice(86400), 3))).format(*row))
 
 
+    def __repr__(self): return self.__str__()
