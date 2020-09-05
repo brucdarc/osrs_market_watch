@@ -4,7 +4,11 @@ from Item import Item
 from MarketDatabase import MarketDatabase
 import math
 
-TOKEN = 'NjQ0NDAyNTMyNzU1NzAxNzYx.XczgoA.YZb4CYWv4-pOtKq8rVNfy77yLDM'
+
+TOKEN = ""
+with open('token.txt', 'r') as file:
+    TOKEN = file.read()
+
 
 
 class MyClient(discord.Client):
