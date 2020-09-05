@@ -15,11 +15,9 @@ database = MarketDatabase("osrs_data")
 
 tiem = 86400
 
-highMarg = database.getHighestRois_with_time(10, tiem, 5000)
+highMarg = database.getHighestAttr_with_time(10, tiem, 5000)
 
-
-
-print("Items currently with the return on investment")
+#currently with the return on investment")
 for item in highMarg:
     print(item)
 
@@ -30,6 +28,8 @@ for item in database.itemList:
     if 'book page set' in item.name:
         print(item)
 
+
+print("Items")
 
 print("done")
 

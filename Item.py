@@ -74,9 +74,14 @@ class Item:
         #Todo make this take percentile not just average, bad for flips
         time_cutoff = time.time() - time_amount
         split_index = 0
-
+        if len(self.timestamps) == 0:
+            return 0
+        if(self.timestamps[-1] < time_cutoff):
+            return 0
         while(self.timestamps[split_index] < time_cutoff):
-            split_index += 1
+
+            if self.timestamps[split_index] < time_cutoff:
+                split_index += 1
 
 
         buy_prices = self.buy_averages[split_index:]
@@ -107,9 +112,13 @@ class Item:
         #Todo make this take percentile not just average, bad for flips
         time_cutoff = time.time() - time_amount
         split_index = 0
-
+        if len(self.timestamps) == 0:
+            return 0
+        if(self.timestamps[-1] < time_cutoff):
+            return 0
         while(self.timestamps[split_index] < time_cutoff):
-            split_index += 1
+            if self.timestamps[split_index] < time_cutoff:
+                split_index += 1
 
 
         sell_prices = self.sell_averages[split_index:]

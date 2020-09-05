@@ -5,6 +5,7 @@ import numpy
 from Item import Item
 #import sorted
 
+
 class MarketDatabase:
     def __init__(self, filename):
         # reads a preset database file and converts it into objects
@@ -70,23 +71,9 @@ class MarketDatabase:
             topn.append(currentTop)
         return topn
 
-    def getHighestMargins_with_time(self, howmany, time_ago):
-        assert (len(self.itemList) > howmany)
-        topn = []
-        for x in range(0, howmany):
-            currentTop = None
-            for item in self.itemList:
-                if item.cbuy_price() > 50:
-                    if currentTop is None:
-                        if item not in topn:
-                            currentTop = item
-                    else:
-                        if item.getAverageMargin(time_ago) > currentTop.getAverageMargin(time_ago) and item not in topn:
-                            currentTop = item
-            topn.append(currentTop)
-        return topn
 
-    def getHighestRois_with_time(self, number_to_retrieve, time_ago, min_margin=0, max_margin=0, min_roi=0,
+
+    def getHighestAttr_with_time(self, number_to_retrieve, time_ago=0, min_margin=0, sortby="roi", max_margin=0, min_roi=0,
                                  max_roi=0, min_dailY_quantity=0, max_daily_quantity=0, is_members=False, min_price=0, max_price=0):
 
 
@@ -96,24 +83,43 @@ class MarketDatabase:
         #sort the list of (item, sort_var) based on the variable i want to sort by
 
         valid_item_canditates = []
-
+        #do boolean checks for all the user inputed conditions, and only consider the items that meet those conditions for the final return list
         for item in self.itemList:
-            search_conditions = item.getAverageMargin(time_ago) > min_margin
+            if time_ago != 0:
+                search_conditions = item.getAverageMargin(time_ago) > min_margin
+            else:
+                search_conditions = item.cmargin() > min_margin
             if search_conditions:
                 valid_item_canditates.append(item)
 
-
-
         tuple_item_list = []
 
+
+        #create tuple pairs of the item, and the user defined search attribute. Sort the tuple list, then take the top n, where n is how many the user requested
+        #currently supports sort parameters roi, and margin
+        #TODO: allow user to ignore time, and use getRoi and getMargin to get those attributes for only the latest market snapshot
         for item in valid_item_canditates:
-            tuple_paired_item = (item, item.getAverageRoi(time_ago))
+            if time_ago != 0:
+                if sortby=="roi":
+                    tuple_paired_item = (item, item.getAverageRoi(time_ago))
+                elif sortby=="margin":
+                    tuple_paired_item = (item, item.getAverageMargin(time_ago))
+                else:
+                    raise Exception('attribute to sort by is not supported')
+            else:
+                if sortby=="roi":
+                    tuple_paired_item = (item, item.croi())
+                elif sortby=="margin":
+                    tuple_paired_item = (item, item.cmargin())
+                else:
+                    raise Exception('attribute to sort by is not supported')
+
             tuple_item_list.append(tuple_paired_item)
 
 
         sorted_tuples = sorted(tuple_item_list, key=lambda x: x[-1])
 
-        print(sorted_tuples)
+
 
         topn = [tup[0] for tup in sorted_tuples]
         topn.reverse()
