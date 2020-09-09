@@ -163,10 +163,10 @@ class Item:
 
     def __str__(self):
         temp = 'lmao'#ayy lmao
-        CurrentROIitems_str = '{: <8} {: <28} most recent margin: {: <7} most recent ROI: {: <17} buy qty: {: <8} sell qty: {: <8} buy avg: {: <8} sell avg: {: <8}\n         Recent activity:\t      bought:{: <20} sold:{: <10}\nOver the last 24 hours:               average margin: {: <11} average ROI: {: <21} average buy price: {: <17} average sell price: {}\n'
-        CurrentROIitems_list = [self.overall_quantities, self.name, self.margins, self.rois, self.buy_quantities, self.sp, self.sell_quantities, self.buy_averages, self.sell_averages]
+        CurrentROIitems_str = '{: <18} most recent margin: {: <7} most recent ROI: {: <17} \nbuy qty: {: <8} sell qty: {: <8} buy avg: {: <12} sell avg: {: <12}\nRecent activity:\t      bought:{: <20} sold:{: <10}\nOver the last 24 hours: \t average margin: {: <11} average ROI: {: <21} \naverage buy price: {: <17} average sell price: {}\n'
+        CurrentROIitems_list = [self.name, self.margins, self.rois, self.buy_quantities, self.sp, self.sell_quantities, self.buy_averages, self.sell_averages]
         for row in CurrentROIitems_list:
-            return (CurrentROIitems_str.format(self.overall_quantities[-1], self.name, self.margins[-1], str(round(self.rois[-1], 3)), self.buy_quantities[-1], self.sell_quantities[-1], self.buy_averages[-1], self.sell_averages[-1], self.last_10_buy_quant(), self.last_10_sell_quant(), str(round(self.getAverageMargin(86400), 3)), str(round(self.getAverageRoi(86400), 3)), str(round(self.getAverageBuyPrice(86400), 3)), str(round(self.getAverageSellPrice(86400), 3))).format(*row))
+            return (CurrentROIitems_str.format(self.name, self.margins[-1], str(round(self.rois[-1], 3)), self.buy_quantities[-1], self.sell_quantities[-1], self.buy_averages[-1], self.sell_averages[-1], self.last_10_buy_quant(), self.last_10_sell_quant(), str(round(self.getAverageMargin(86400), 3)), str(round(self.getAverageRoi(86400), 3)), str(round(self.getAverageBuyPrice(86400), 3)), str(round(self.getAverageSellPrice(86400), 3))).format(*row))
 
 
     def __repr__(self): return self.__str__()

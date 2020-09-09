@@ -87,6 +87,7 @@ class MarketDatabase:
         for item in self.itemList:
             if time_ago != 0:
                 search_conditions = item.getAverageMargin(time_ago) > min_margin
+                search_conditions = search_conditions and item.getAverageRoi(time_ago) > min_roi
             else:
                 search_conditions = item.cmargin() > min_margin
             if search_conditions:
@@ -94,6 +95,7 @@ class MarketDatabase:
 
         tuple_item_list = []
 
+        print(sortby)
 
         #create tuple pairs of the item, and the user defined search attribute. Sort the tuple list, then take the top n, where n is how many the user requested
         #currently supports sort parameters roi, and margin
@@ -104,6 +106,7 @@ class MarketDatabase:
                     tuple_paired_item = (item, item.getAverageRoi(time_ago))
                 elif sortby=="margin":
                     tuple_paired_item = (item, item.getAverageMargin(time_ago))
+                    #print(item.getAverageMargin(time_ago))
                 else:
                     raise Exception('attribute to sort by is not supported')
             else:
@@ -116,16 +119,19 @@ class MarketDatabase:
 
             tuple_item_list.append(tuple_paired_item)
 
+        #print(tuple_item_list)
 
         sorted_tuples = sorted(tuple_item_list, key=lambda x: x[-1])
 
-
+        #print(sorted_tuples)
+        sorted_tuples.reverse()
 
         topn = [tup[0] for tup in sorted_tuples]
-        topn.reverse()
+        attrs = [tup[1] for tup in sorted_tuples]
+
         if len(topn) > number_to_retrieve:
-            return topn[:number_to_retrieve]
-        else: return topn
+            return topn[:number_to_retrieve], attrs[:number_to_retrieve]
+        else: return topn, attrs
 
 
     def __str__(self):
