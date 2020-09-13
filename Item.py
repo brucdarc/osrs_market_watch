@@ -149,7 +149,44 @@ class Item:
 
         return result
 
+    def getTotalSellQuantity(self, time_amount):
+        if time_amount == 0:
+            return self.csell_quant()
+        #Todo make this take percentile not just average, bad for flips
+        time_cutoff = time.time() - time_amount
+        split_index = len(self.timestamps)-1
+        if len(self.timestamps) == 0:
+            return 0
+        if(self.timestamps[-1] < time_cutoff):
+            return 0
+        while(self.timestamps[split_index] > time_cutoff):
+            if self.timestamps[split_index] > time_cutoff:
+                split_index -= 1
 
+        sell_quants = self.sell_quantities[split_index:]
+        sum = 0
+        for quant in sell_quants: sum += quant
+
+        return sum
+
+    def getTotalBuyQuantity(self, time_amount):
+        if time_amount == 0:
+            return self.cbuy_quant()
+        # Todo make this take percentile not just average, bad for flips
+        time_cutoff = time.time() - time_amount
+        split_index = len(self.timestamps) - 1
+        if len(self.timestamps) == 0:
+            return 0
+        if (self.timestamps[-1] < time_cutoff):
+            return 0
+        while (self.timestamps[split_index] > time_cutoff):
+            if self.timestamps[split_index] > time_cutoff:
+                split_index -= 1
+
+        buy_quants = self.buy_quantities[split_index:]
+        sum = 0
+        for quant in buy_quants: sum += quant
+        return sum
 
     def last_10_buy_quant(self):
         if (len(self.buy_quantities) < 10): return ""
@@ -175,6 +212,13 @@ class Item:
         CurrentROIitems_list = [self.name, self.margins, self.rois, self.buy_quantities, self.sp, self.sell_quantities, self.buy_averages, self.sell_averages]
         for row in CurrentROIitems_list:
             return (CurrentROIitems_str.format(self.name, self.margins[-1], str(round(self.rois[-1], 3)), self.buy_quantities[-1], self.sell_quantities[-1], self.buy_averages[-1], self.sell_averages[-1], self.last_10_buy_quant(), self.last_10_sell_quant(), str(round(self.getAverageMargin(86400), 3)), str(round(self.getAverageRoi(86400), 3)), str(round(self.getAverageBuyPrice(86400), 3)), str(round(self.getAverageSellPrice(86400), 3))).format(*row))
+
+    def uberStr(self, time_ago):
+        temp = 'lmao'#ayy lmao
+        CurrentROIitems_str = '{: <18} most recent margin: {: <7} most recent ROI: {: <17} \nbuy qty: {: <8} sell qty: {: <8} buy avg: {: <12} sell avg: {: <12}\nRecent activity:\t      bought:{: <20} sold:{: <10}\nData for the provided time period: \t average margin: {: <11} average ROI: {: <21} \naverage buy price: {: <17} average sell price: {}\n'
+        CurrentROIitems_list = [self.name, self.margins, self.rois, self.buy_quantities, self.sp, self.sell_quantities, self.buy_averages, self.sell_averages]
+        for row in CurrentROIitems_list:
+            return (CurrentROIitems_str.format(self.name, self.margins[-1], str(round(self.rois[-1], 3)), self.buy_quantities[-1], self.sell_quantities[-1], self.buy_averages[-1], self.sell_averages[-1], self.last_10_buy_quant(), self.last_10_sell_quant(), str(round(self.getAverageMargin(time_ago), 3)), str(round(self.getAverageRoi(time_ago), 3)), str(round(self.getAverageBuyPrice(time_ago), 3)), str(round(self.getAverageSellPrice(time_ago), 3))).format(*row))
 
 
     def __repr__(self): return self.__str__()

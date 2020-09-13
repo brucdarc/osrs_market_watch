@@ -36,15 +36,35 @@ $topItem - finds the top items sorted based on either margin or return on invest
 
  - min_roi=(roi)	-only show items with at least this much of a return on investment
 
- - time=(number) (days/hours/minutes/seconds) - how far back in time do you want the bot to calculate margins. If this flag is not used, or time is 0, the program will only consider the latest market snapshot 
+ - time=(number) (days/hours/minutes/seconds) - how far back in time do you want the bot to calculate margins.
+            If this flag is not used, or time is 0, the program will only consider the latest market snapshot.
 
  - -v / verbose / -verbose  - display all the information about items in your query. 
  
  - number=(number of items) - how many items will the bot show you information for 
-  
-  
-
-$searchItem <\item name>- Displays information about a particular item
+ 
+  - min_sell_quant=(num) - min sell quantity for the selected item period
+ 
+ - max_sell_quant=(num) - max sell quantity for the selected item period
+ 
+ - min_buy_quant=(num) - min buy quantity for the selected item period
+ 
+ - max_buy_quant=(num) - max buy quantity for the selected item period
+ 
+ - min_total_quant=(num) - min total quantity for the selected item period
+ 
+ - max_total_quant=(num) - max total quantity for the selected item period
+ 
+ - min_sell_price=(num) - min sell price for the selected item period
+ 
+ - max_sell_price=(num) - max sell price for the selected item period
+ 
+ - min_buy_price=(num) - min buy price for the selected item period
+ 
+ - max_buy_price=(num) - max buy price for the selected item period
+ 
+ - members=(True/False) - is the item only usable by members```'''
+            ret2 = '''```$searchItem <\item name>- Displays information about a particular item
 
 $help - Shows some useful information
 
@@ -64,6 +84,7 @@ $searchItem Logs ```'''
 
 
             await message.channel.send(str(ret))
+            await message.channel.send(str(ret2))
 
         if message.content.startswith('$topItem'):
             await self.handleQuery(message)
@@ -88,13 +109,19 @@ $searchItem Logs ```'''
     async def handleQuery(self, message):
         args = message.content.split(" ")
 
-        sort, time, min_marg, min_roi, verbose, number_of_items_to_retrieve, max_marg, max_roi = await self.parseArgs(args, message)
+        sort, time, min_marg, min_roi, verbose, number_of_items_to_retrieve, max_marg, max_roi, min_sell_quant, max_sell_quant, \
+               min_buy_quant, max_buy_quant, min_total_quant, max_total_quant, \
+               min_sell_price, max_sell_price, min_buy_price, max_buy_price, members = await self.parseArgs(args, message)
 
         if number_of_items_to_retrieve > 50:
             await message.channel.send("Cannot complete request, maximum query size is 50 items.")
             raise(Exception())
 
-        topItems, values = self.database.getHighestAttr_with_time(number_of_items_to_retrieve, time_ago=time, sortby=sort, min_margin=min_marg, min_roi=min_roi)
+        topItems, values = self.database.getHighestAttr_with_time(number_of_items_to_retrieve, time_ago=time, sortby=sort, min_margin=min_marg, min_roi=min_roi,
+                                                                  max_margin=max_marg, max_roi=max_roi, min_sell_quantity=min_sell_quant, max_sell_quantity=max_sell_quant,
+                                                                  min_buy_quantity=min_buy_quant, max_buy_quantity=max_buy_quant, min_total_quantity=min_total_quant,
+                                                                  max_total_quantity=max_total_quant, min_buy_price=min_buy_price, max_buy_price=max_buy_price,
+                                                                  min_sell_price=min_sell_price, max_sell_price=max_sell_price, is_members=members)
         # print(topItems)
         bot_response = ""
         for x in range(0, len(topItems)):
@@ -110,7 +137,7 @@ $searchItem Logs ```'''
                 test_bot_response += str(round(values[x], 2)) + "  "
                 test_bot_response += url + "\n"
             else:
-                test_bot_response += "#" + str(x + 1) + "```" + str(item) + "```"
+                test_bot_response += "#" + str(x + 1) + "```" + item.uberStr(time) + "```"
 
             #make sure we dont go over discord character limit per message. If a message would be too big after adding an item,
             #put that item into the next message instead
@@ -140,6 +167,19 @@ $searchItem Logs ```'''
         max_roi = 0
         verbose = False
         number = 10
+        min_sell_quant = 0
+        max_sell_quant = 0
+        min_buy_quant = 0
+        max_buy_quant = 0
+        min_total_quant = 0
+        max_total_quant = 0
+        min_sell_price = 0
+        max_sell_price = 0
+        min_buy_price = 0
+        max_buy_price = 0
+        members = True
+
+
 
         for x in range(0, len(args)):
             arg = args[x]
@@ -153,6 +193,46 @@ $searchItem Logs ```'''
                 max_marg = int(arg[11:])
             if arg.startswith("max_roi="):
                 max_roi = float(arg[8:])
+
+            if arg.startswith("min_sell_quant="):
+                min_sell_quant = float(arg[15:])
+
+            if arg.startswith("max_sell_quant="):
+                max_sell_quant = float(arg[15:])
+
+            if arg.startswith("min_buy_quant="):
+                min_buy_quant = float(arg[14:])
+
+            if arg.startswith("max_buy_quant="):
+                max_buy_quant = float(arg[14:])
+
+            if arg.startswith("min_total_quant="):
+                min_total_quant = float(arg[16:])
+
+            if arg.startswith("max_total_quant="):
+                max_total_quant = float(arg[16:])
+
+
+
+            if arg.startswith("min_sell_price="):
+                min_sell_price = float(arg[15:])
+
+            if arg.startswith("max_sell_price="):
+                max_sell_price = float(arg[15:])
+
+            if arg.startswith("min_buy_price="):
+                min_buy_price = float(arg[14:])
+
+            if arg.startswith("max_buy_price="):
+                max_buy_price = float(arg[14:])
+
+            if arg.startswith("members="):
+                if arg[8:].lower() == "true":
+                    members = True
+
+
+
+
             if arg.startswith("-v") or arg.startswith("verbose") or arg.startswith("-verbose"):
                 verbose = True
             if arg.startswith("number="):
@@ -176,7 +256,9 @@ $searchItem Logs ```'''
                 else:
                     await message.channel.send("Please provide a valid time unit. (days/hours/minutes)")
                     raise Exception('Please provide a valid time unit. (days/hours/minutes)')
-        return sort, time, min_marg, min_roi, verbose, number, max_marg, max_roi
+        return sort, time, min_marg, min_roi, verbose, number, max_marg, max_roi, min_sell_quant, max_sell_quant, \
+               min_buy_quant, max_buy_quant, min_total_quant, max_total_quant, \
+               min_sell_price, max_sell_price, min_buy_price, max_buy_price, members
 
 
 

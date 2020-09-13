@@ -43,10 +43,9 @@ class MarketDatabase:
 
 
     def getHighestAttr_with_time(self, number_to_retrieve, time_ago=0, min_margin=0, sortby="roi", max_margin=0, min_roi=0,
-                                 max_roi=0, min_dailY_quantity=0, max_daily_quantity=0, is_members=False, min_sell_price=0, max_sell_price=0,
-                                 min_buy_price=0, max_buy_price=0):
-
-
+                                 max_roi=0, min_sell_quantity=0, max_sell_quantity=0, min_buy_quantity=0, max_buy_quantity=0,
+                                 min_total_quantity=0, max_total_quantity=0,
+                                 is_members=False, min_sell_price=0, max_sell_price=0, min_buy_price=0, max_buy_price=0):
 
         #run through items, grab all of them that meet my search criteria
         #create tuple pairs of the items, and the sort condition i want to sort them by
@@ -65,18 +64,29 @@ class MarketDatabase:
             if sell_price != 0:
                 roi = (buy_price - sell_price) / sell_price
 
+            sell_quant = item.getTotalSellQuantity(time_ago)
+            buy_quant = item.getTotalBuyQuantity(time_ago)
+            total_quant = sell_quant + buy_quant
+
             #mins
             search_conditions = margin > min_margin
             search_conditions = search_conditions and roi > min_roi
             search_conditions = search_conditions and sell_price > min_sell_price
             search_conditions = search_conditions and buy_price > min_buy_price
+            search_conditions = search_conditions and sell_quant > min_sell_quantity
+            search_conditions = search_conditions and buy_quant > min_buy_quantity
+            search_conditions = search_conditions and total_quant > min_total_quantity
             #other
             search_conditions = search_conditions and (item.members == is_members)
             #maxes
-            search_conditions = (search_conditions and margin > max_margin) or max_margin == 0
-            search_conditions = (search_conditions and roi < max_roi) or max_roi == 0
-            search_conditions = (search_conditions and sell_price > max_sell_price) or max_sell_price == 0
-            search_conditions = (search_conditions and buy_price > max_buy_price) or max_buy_price == 0
+            search_conditions = search_conditions and (margin > max_margin or max_margin == 0)
+            search_conditions = search_conditions and (roi < max_roi or max_roi == 0)
+            search_conditions = search_conditions and (sell_price > max_sell_price or max_sell_price == 0)
+            search_conditions = search_conditions and (buy_price > max_buy_price or max_buy_price == 0)
+            search_conditions = search_conditions and (buy_quant > max_buy_quantity or max_buy_quantity == 0)
+            search_conditions = search_conditions and (sell_quant > max_sell_quantity or max_sell_quantity == 0)
+            search_conditions = search_conditions and (total_quant > max_total_quantity or max_total_quantity == 0)
+
 
             if search_conditions:
                 if sortby == "roi":
@@ -96,7 +106,7 @@ class MarketDatabase:
 
         #create tuple pairs of the item, and the user defined search attribute. Sort the tuple list, then take the top n, where n is how many the user requested
         #currently supports sort parameters roi, and margin
-        #TODO: allow user to ignore time, and use getRoi and getMargin to get those attributes for only the latest market snapshot
+        #TODONE: allow user to ignore time, and use getRoi and getMargin to get those attributes for only the latest market snapshot
 
         sorted_tuples = sorted(tuple_item_list, key=lambda x: x[-1])
         sorted_tuples.reverse()
