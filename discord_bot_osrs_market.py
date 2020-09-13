@@ -5,6 +5,7 @@ from MarketDatabase import MarketDatabase
 import math
 
 
+
 TOKEN = ""
 with open('token.txt', 'r') as file:
     TOKEN = file.read()
@@ -29,7 +30,7 @@ $topItem - finds the top items sorted based on either margin or return on invest
 
  Filters:
 
- - sort=(roi/margin) -choose which type of top 10 list you want
+ - sort=(roi/margin/buy_price/sell_price) -choose which type of top 10 list you want
 
  - min_margin=(num) -only show items with at least this big of a margin
 
@@ -87,7 +88,7 @@ $searchItem Logs ```'''
     async def handleQuery(self, message):
         args = message.content.split(" ")
 
-        sort, time, min_marg, min_roi, verbose, number_of_items_to_retrieve = await self.parseArgs(args, message)
+        sort, time, min_marg, min_roi, verbose, number_of_items_to_retrieve, max_marg, max_roi = await self.parseArgs(args, message)
 
         if number_of_items_to_retrieve > 50:
             await message.channel.send("Cannot complete request, maximum query size is 50 items.")
@@ -135,6 +136,8 @@ $searchItem Logs ```'''
         time = 0
         min_marg = 0
         min_roi = 0
+        max_marg = 0
+        max_roi = 0
         verbose = False
         number = 10
 
@@ -146,6 +149,10 @@ $searchItem Logs ```'''
                 min_marg = int(arg[11:])
             if arg.startswith("min_roi="):
                 min_roi = float(arg[8:])
+            if arg.startswith("max_margin="):
+                max_marg = int(arg[11:])
+            if arg.startswith("max_roi="):
+                max_roi = float(arg[8:])
             if arg.startswith("-v") or arg.startswith("verbose") or arg.startswith("-verbose"):
                 verbose = True
             if arg.startswith("number="):
@@ -169,7 +176,7 @@ $searchItem Logs ```'''
                 else:
                     await message.channel.send("Please provide a valid time unit. (days/hours/minutes)")
                     raise Exception('Please provide a valid time unit. (days/hours/minutes)')
-        return sort, time, min_marg, min_roi, verbose, number
+        return sort, time, min_marg, min_roi, verbose, number, max_marg, max_roi
 
 
 

@@ -40,90 +40,65 @@ class MarketDatabase:
 
         return "lmao"
 
-    def getHighestMargins(self, listLen):
-        assert(len(self.itemList) > listLen)
-        topn = []
-        for x in range(0 ,listLen):
-            currentTop = None
-            for item in self.itemList:
-                if currentTop is None:
-                    if item not in topn:
-                        currentTop = item
-                else:
-                    if item.cmargin() > currentTop.cmargin() and item not in topn:
-                        currentTop = item
-            topn.append(currentTop)
-        return topn
-
-    def getHighestRois(self, listLen):
-        assert(len(self.itemList) > listLen)
-        topn = []
-        for x in range(0 ,listLen):
-            currentTop = None
-            for item in self.itemList:
-                if item.cbuy_price() > 50:
-                    if currentTop is None:
-                        if item not in topn:
-                            currentTop = item
-                    else:
-                        if item.croi() > currentTop.croi() and item not in topn:
-                            currentTop = item
-            topn.append(currentTop)
-        return topn
-
 
 
     def getHighestAttr_with_time(self, number_to_retrieve, time_ago=0, min_margin=0, sortby="roi", max_margin=0, min_roi=0,
-                                 max_roi=0, min_dailY_quantity=0, max_daily_quantity=0, is_members=False, min_price=0, max_price=0):
+                                 max_roi=0, min_dailY_quantity=0, max_daily_quantity=0, is_members=False, min_sell_price=0, max_sell_price=0,
+                                 min_buy_price=0, max_buy_price=0):
 
 
 
         #run through items, grab all of them that meet my search criteria
         #create tuple pairs of the items, and the sort condition i want to sort them by
         #sort the list of (item, sort_var) based on the variable i want to sort by
-
-        valid_item_canditates = []
-        #do boolean checks for all the user inputed conditions, and only consider the items that meet those conditions for the final return list
-        for item in self.itemList:
-            if time_ago != 0:
-                search_conditions = item.getAverageMargin(time_ago) > min_margin
-                search_conditions = search_conditions and item.getAverageRoi(time_ago) > min_roi
-            else:
-                search_conditions = item.cmargin() > min_margin
-            if search_conditions:
-                valid_item_canditates.append(item)
-
         tuple_item_list = []
+        #do boolean checks for all the user inputed conditions, and only consider the items that meet those conditions for the final return list
+        print("start " + str(time.time()))
+        for item in self.itemList:
 
+            #check all the conditions for each item, to see if it makes it into our list.
+            #average methods just return the last known value if time is 0
+            sell_price = item.getAverageSellPrice(time_ago)
+            buy_price = item.getAverageBuyPrice(time_ago)
+            margin = buy_price - sell_price
+            roi = 0
+            if sell_price != 0:
+                roi = (buy_price - sell_price) / sell_price
+
+            #mins
+            search_conditions = margin > min_margin
+            search_conditions = search_conditions and roi > min_roi
+            search_conditions = search_conditions and sell_price > min_sell_price
+            search_conditions = search_conditions and buy_price > min_buy_price
+            #other
+            search_conditions = search_conditions and (item.members == is_members)
+            #maxes
+            search_conditions = (search_conditions and margin > max_margin) or max_margin == 0
+            search_conditions = (search_conditions and roi < max_roi) or max_roi == 0
+            search_conditions = (search_conditions and sell_price > max_sell_price) or max_sell_price == 0
+            search_conditions = (search_conditions and buy_price > max_buy_price) or max_buy_price == 0
+
+            if search_conditions:
+                if sortby == "roi":
+                    tuple_paired_item = (item, roi)
+                elif sortby == "margin":
+                    tuple_paired_item = (item, margin)
+                elif sortby == "sell_price":
+                    tuple_paired_item = (item, sell_price)
+                elif sortby == "buy_price":
+                    tuple_paired_item = (item, buy_price)
+                else:
+                    raise Exception('attribute to sort by is not supported')
+                tuple_item_list.append(tuple_paired_item)
+
+        print("finish " + str(time.time()))
         print(sortby)
 
         #create tuple pairs of the item, and the user defined search attribute. Sort the tuple list, then take the top n, where n is how many the user requested
         #currently supports sort parameters roi, and margin
         #TODO: allow user to ignore time, and use getRoi and getMargin to get those attributes for only the latest market snapshot
-        for item in valid_item_canditates:
-            if time_ago != 0:
-                if sortby=="roi":
-                    tuple_paired_item = (item, item.getAverageRoi(time_ago))
-                elif sortby=="margin":
-                    tuple_paired_item = (item, item.getAverageMargin(time_ago))
-                    #print(item.getAverageMargin(time_ago))
-                else:
-                    raise Exception('attribute to sort by is not supported')
-            else:
-                if sortby=="roi":
-                    tuple_paired_item = (item, item.croi())
-                elif sortby=="margin":
-                    tuple_paired_item = (item, item.cmargin())
-                else:
-                    raise Exception('attribute to sort by is not supported')
-
-            tuple_item_list.append(tuple_paired_item)
-
-        #print(tuple_item_list)
 
         sorted_tuples = sorted(tuple_item_list, key=lambda x: x[-1])
-
-        #print(sorted_tuples)
         sorted_tuples.reverse()
 
         topn = [tup[0] for tup in sorted_tuples]

@@ -61,9 +61,13 @@ class Item:
         return self.rois[-1]
 
     def getAverageMargin(self, time_amount):
+        if time_amount == 0:
+            return self.cmargin()
         return self.getAverageBuyPrice(time_amount) - self.getAverageSellPrice(time_amount)
 
     def getAverageRoi(self, time_amount):
+        if time_amount == 0:
+            return self.croi()
         sell_av =  self.getAverageSellPrice(time_amount)
         buy_av = self.getAverageBuyPrice(time_amount)
         if sell_av == 0 or buy_av == 0:
@@ -71,17 +75,18 @@ class Item:
         return (buy_av - sell_av) / sell_av
 
     def getAverageBuyPrice(self, time_amount):
+        if time_amount == 0:
+            return self.cbuy_price()
         #Todo make this take percentile not just average, bad for flips
         time_cutoff = time.time() - time_amount
-        split_index = 0
+        split_index = len(self.timestamps)-1
         if len(self.timestamps) == 0:
             return 0
         if(self.timestamps[-1] < time_cutoff):
             return 0
-        while(self.timestamps[split_index] < time_cutoff):
-
-            if self.timestamps[split_index] < time_cutoff:
-                split_index += 1
+        while(self.timestamps[split_index] > time_cutoff):
+            if self.timestamps[split_index] > time_cutoff:
+                split_index -= 1
 
 
         buy_prices = self.buy_averages[split_index:]
@@ -109,16 +114,18 @@ class Item:
 
 
     def getAverageSellPrice(self, time_amount):
+        if time_amount == 0:
+            return self.csell_price()
         #Todo make this take percentile not just average, bad for flips
         time_cutoff = time.time() - time_amount
-        split_index = 0
+        split_index = len(self.timestamps)-1
         if len(self.timestamps) == 0:
             return 0
         if(self.timestamps[-1] < time_cutoff):
             return 0
-        while(self.timestamps[split_index] < time_cutoff):
-            if self.timestamps[split_index] < time_cutoff:
-                split_index += 1
+        while(self.timestamps[split_index] > time_cutoff):
+            if self.timestamps[split_index] > time_cutoff:
+                split_index -= 1
 
 
         sell_prices = self.sell_averages[split_index:]
@@ -141,6 +148,7 @@ class Item:
             result = numpy.percentile(meaningful_datapoints, percentile)
 
         return result
+
 
 
     def last_10_buy_quant(self):
